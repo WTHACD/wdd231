@@ -1,0 +1,130 @@
+/* Larger Screen Styles (Media Query) */
+@media (min-width: 768px) {
+    /* Header */
+    header {
+        justify-content: center; /* Center header content */
+        padding: 20px; /* Additional spacing */
+    }
+
+    header img {
+        margin-right: 20px; /* Separate image from text */
+        width: 100px; /* Adjust image size */
+        height: 100px; /* Adjust image size */
+    }
+
+    header span {
+        font-size: 2em; /* Increase font size for desktop */
+    }
+
+    .menu-icon {
+        display: none; /* Hide menu icon on large screens */
+    }
+
+    /* Navigation */
+    nav {
+        display: flex; /* Display navigation horizontally */
+        justify-content: space-around; /* Center navigation links */
+        background-color: #003366; /* Dark blue background */
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block; /* Display links horizontally */
+        margin: 0 15px; /* Spacing between links */
+        color: #fff; /* White text */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        background-color: #70a1d7; /* Lighter blue on hover */
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    /* Main Container */
+    .container {
+        display: flex; /* Align cards horizontally */
+        flex-direction: row; /* Display in a row */
+        justify-content: space-around; /* Uniform spacing between cards */
+        gap: 20px;
+    }
+
+    .card {
+        width: 98%; /* Adjust card width for desktop */
+        margin-bottom: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5em; /* Increase font size for headings */
+    }
+
+    .card img {
+        width: 100%; /* Responsive image inside card */
+        border-radius: 5px; /* Rounded corners for images */
+    }
+
+    /* Certificates Section */
+    #certificates {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #ADD8E6; /* Light blue background */
+        border-radius: 10px;
+    }
+
+    .course-nav ul {
+        display: flex; /* Display links horizontally */
+        justify-content: center;
+        list-style-type: none; /* Remove bullet points */
+        padding-left: 0;
+    }
+
+    .course-nav li {
+        margin-right: 10px; /* Spacing between filter buttons */
+    }
+
+    .course-nav li a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #000; /* Black background for filter buttons */
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .course-nav li a:hover {
+        background-color: #444444; /* Dark gray on hover */
+    }
+
+    .certs {
+        display: flex; /* Align certificates horizontally */
+        flex-wrap: wrap; /* Allow certificates to wrap if needed */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .certs button {
+        width: calc(33% - 20px); /* Buttons take up one-third of the width with adjusted margin */
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .certs button.complete {
+        background-color: #003366; /* Dark blue for completed */
+        color: #fff;
+    }
+
+    .certs button.incomplete {
+        background-color: #ccc; /* Light gray for incomplete */
+        color: #000;
+    }
+
+    footer {
+        background-color: #003366; /* Dark blue for the footer */
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+    }
+}

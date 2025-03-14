@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <meta name="description" content="WDD231 - Web Frontend Development - Course Home Page">  
+    <meta name="author" content="WACD">
+    <title>Home Page</title> 
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css"> 
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    </head>
 <body>
+
+    <header>
+        <img src="images/profile.jpeg" alt="profilepic">
+        <span>Alejandro Camacho Doblado</span>
+        <div class="menu-icon">&#9776;</div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Chamber</a>
+        <a href="https://github.com/WTHACD">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/wilberth-alejandro-camacho-doblado-330374198/" id="linkedin">LinkedIn</a>
+    </nav>
+
+    <main>
+        <section class="container">
+            <div class="card">
+                <h2>Course Work</h2>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Arenal, Costa Rica</h2>
+                <img src="images/volcano.webp" alt="volcano">
+                <p>Arenal Volcano</p>
+            </div>
+        </section>
+
+        <section id="certificates" class="card">
+            <h2>Web and Computer Programming Certificate</h2>
+            <nav class="course-nav">
+                <ul>
+                    <li><a href="#" id="all">All</a></li>
+                    <li><a href="#" id="cse">CSE</a></li>
+                    <li><a href="#" id="wdd">WDD</a></li>
+                </ul>
+            </nav>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+            <div class="certs"></div>
+            
+        </section>
+    </main>
+
+    <footer>
+    <p>| &copy; <span id="currentyear"></span> | Wilberth Alejandro Camacho Doblado | San José, Costa Rica</p>
+    <p><span id="lastModified"></span></p>
+
     
+
 </body>
 </html>

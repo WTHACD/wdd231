@@ -1,0 +1,129 @@
+/* Small Screen Styles (Base Styles) */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light blue */
+    color: #003366; /* Dark blue */
+}
+
+header {
+    background-color: #003366; /* Dark blue */
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    border-radius: 25%;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #fff; /* White border */
+}
+
+header span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #4682B4; /* Steel blue */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: none; /* Hidden by default on mobile */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Display links vertically on mobile */
+}
+
+nav a:hover {
+    background-color: #70a1d7; /* Lighter blue on hover */
+}
+
+nav.show {
+    display: block; /* Show menu when activated */
+}
+
+main {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on mobile */
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 20px;
+}
+
+.card h2 {
+    background-color: #003366; /* Dark blue background for headers */
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%; /* Responsive image */
+}
+
+/* Styles for the certificates section */
+#certificates {
+    background-color: #ADD8E6; /* Light blue */
+}
+
+.course-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove indentation */
+}
+
+.course-nav li {
+    display: inline-block; /* Display filter links horizontally */
+}
+
+.course-nav li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    background-color: #000; /* Black background for filter buttons */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.course-nav li a:hover {
+    background-color: #444444; /* Dark gray on hover */
+}
+
+/* Dynamic course buttons */
+.certs button {
+    width: calc(100% - 20px); /* Buttons take full width minus inner margin */
+    margin-bottom: 10px;
+}
+
+.certs button.complete {
+    background-color: #003366; /* Dark blue for completed */
+    color: #fff;
+}
+
+.certs button.incomplete {
+    background-color: #ccc; /* Light gray for incomplete */
+    color: #000;
+}
