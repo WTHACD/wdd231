@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Etiquetas meta principales -->
+  <meta name="description" content="Directorio de negocios locales del Timbuktu Chamber of Commerce">
+  <meta name="author" content="Wilberth Alejandro Camacho Doblado">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+  <script src="scripts/date.js"></script>
+  <script src="scripts/directory.js" type="module"></script>
+  <script src="scripts/navigation.js" type="module"></script>
+  
+  <!-- Etiquetas para Facebook (Open Graph) -->
+  <meta property="og:title" content="Timbuktu Chamber of Commerce - Directorio">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/chamber-fb-image.png">
+  <meta property="og:url" content="https://www.ejemplo.com/directory.html">
+  
+  <!-- Título de la página -->
+  <title>Directorio | Timbuktu Chamber of Commerce</title>
+  
+  <!-- CSS Normalize/Reset (asegúrate de haber descargado o creado tu propio reset) -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <!-- Tu CSS principal -->
+  <link rel="stylesheet" href="styles/large.css">
+</head>
+<body>
+  <!-- HEADER con tu logotipo, nombre de la cámara, etc. -->
+  <header>
+    <div class="header-content">
+      <h1>Timbuktu Chamber of Commerce</h1>
+      <!-- Botón hamburguesa, solo visible en móviles -->
+      <button class="menu-toggle" id="menuBtn" aria-label="Abrir menú">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  
+  <!-- MAIN: Contenido principal -->
+  <main>
+    <h2>Directorio de Miembros</h2>
+    
+    <!-- Botones para cambiar la vista -->
+    <div class="view-controls">
+      <button id="gridBtn">Vista en Cuadrícula</button>
+      <button id="listBtn">Vista en Lista</button>
+    </div>
+    
+    <!-- Sección donde se mostrarán las tarjetas o lista -->
+    <section id="cards" class="grid-view">
+      <!-- El contenido se insertará dinámicamente con JavaScript -->
+    </section>
+  </main>
+  
+  <!-- FOOTER con información de contacto y fecha de última modificación -->
+  <footer>
+    <div class="footer-container">
+      <!-- Contact Information -->
+      <div class="contact">
+        <p>
+          Timbuktu Chamber of Commerce <br>
+          10 Rue De La Paix <br>
+          Timbuktu, Mali 999 <br>
+          info@timbuktucc.org <br>
+          Tel: (223) 555-2300
+        </p>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="socials">
+        <a href="https://www.youtube.com" target="_blank">
+          <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank">
+          <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+        </a>
+      </div>
+  
+      <!-- Trademark and Last Modified -->
+      <div class="trademark">
+        <p>WDD231 Class Project | WACD </p>
+        <p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

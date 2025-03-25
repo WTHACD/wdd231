@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Header fijo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* Contenedor del header */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título del header */
+header h1 {
+  margin: 0;
+}
+
+/* Estilos de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Botón hamburguesa (oculto en escritorio) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main: agrega margen superior para que no se oculte detrás del header fijo */
+main {
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Ajusta según la altura real de tu header */
+  padding: 1rem;
+}
+
+/* Controles de vista (botones para cuadrícula y lista) */
+.view-controls {
+  margin-bottom: 1rem;
+}
+.view-controls button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Contenedor de cards */
+#cards {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Vista en cuadrícula */
+.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mantén el tamaño original */
+}
+
+/* Vista en lista */
+.list-view {
+  grid-template-columns: 1fr;
+}
+
+/* Estilo de cada tarjeta (card) */
+.member-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432); 
+}
+.member-card img {
+  max-width: 100%; /* Ajusta para que las imágenes sean responsivas */
+  margin-bottom: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.member-card h3 {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333333; /* Solo una definición */
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Contact Section */
+.contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Social Media Icons */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a img {
+  width: 40px;
+  height: auto;
+}
+
+/* Trademark Section */
+.trademark {
+  flex: 1;
+  min-width: 200px;
+}
+
+.trademark p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Estilos responsivos para móviles (hasta 600px) */
+@media (max-width: 600px) {
+  /* Mostrar el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Ocultar la navegación por defecto */
+  nav {
+    display: none;
+  }
+  
+  /* Mostrar la navegación cuando tenga la clase nav-open */
+  nav.nav-open {
+    display: block;
+    background-color: #444;
+    position: absolute;
+    top: 100%; /* Justo debajo del header */
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Ajustar el menú en móviles */
+  nav.nav-open ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  
+  nav.nav-open a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #555;
+  }
+  
+  /* Ajuste en las tarjetas */
+  .member-card {
+    box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432);
+  }
+  
+  footer {
+    padding: 1rem; /* Ajusta el padding */
+    font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+  }
+  
+  .socials img {
+    width: 30px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+  }
+}

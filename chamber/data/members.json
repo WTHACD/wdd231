@@ -1,0 +1,67 @@
+[
+    {
+      "name": "USA Promo Items, LLC",
+      "address": "16651 Butano Place, Fontana, CA 92336",
+      "phone": "(888) 407-9929",
+      "website": "http://www.usapromoitems.com/",
+      "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_92,w_722,x_0,y_0/c_limit,h_100,w_250/f_auto/q_auto:best/v1645124668/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/6f3e026835ae46d3b43111d4028c2d91/usa-promo.png",
+      "membershipLevel": 3,
+      "description": "Advertising/Promotions."
+    },
+    {
+      "name": "Minuteman Press of Rancho Cucamonga",
+      "address": "10844 Edison Ct., Rancho Cucamonga, CA 91730",
+      "phone": "(909) 483-0688",
+      "website": "https://www.mmprancho.com/",
+      "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_159,w_605,x_0,y_0/c_limit,h_100,w_250/f_auto/q_auto:best/v1644856619/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/c1d0f27159464a168f090ec676a23e0b/MMP2015-Logo-New-Slogan.png",
+      "membershipLevel": 2,
+      "description": "Printing & Typesetting Services."
+    },
+    {
+      "name": "U-Media Group",
+      "address": "Carretera Norte 22, Timbuktu, Mali",
+      "phone": "(909) 728-2402",
+      "website": "http://www.u-mediagroup.com/",
+      "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_1200,w_1200,x_0,y_0/f_auto/q_auto:best/c_limit,h_100,w_250/f_auto/q_auto:best/v1721950705/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/3afe533c46684b5babb7ce4684e34319/Icon-2.jpg",
+      "membershipLevel": 1,
+      "description": "Graphic Design Advertising & Media Advertising/Promotions Signs & Banners."
+    },
+    {
+        "name": "El Clasificado EC Hispanic Media",
+        "address": "Carretera Norte 22, Timbuktu, Mali",
+        "phone": "323-278-5310",
+        "website": "http://www.echispanicmedia.com",
+        "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_690,w_1896,x_0,y_0/f_auto/q_auto:best/c_limit,h_100,w_250/f_auto/q_auto:best/v1741043948/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/1c5ab0b00cb443b5a39a11117cd22b00/ec-hispanic-logo-full-color-logo.png",
+        "membershipLevel": 1,
+        "description": "Advertising & Media Advertising/Promotions Graphic Design Marketing & Social Media Public Relations."
+      },
+      {
+        "name": "Fontana Print Company LLC",
+        "address": "Carretera Norte 22, Timbuktu, Mali",
+        "phone": "(909) 897-6530",
+        "website": "https://www.instagram.com/fontanaprintco/",
+        "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_979,w_2266,x_0,y_-1/f_auto/q_auto:best/c_limit,h_100,w_250/f_auto/q_auto:best/v1718382268/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/336fb8d8ccff4dada8e14aa6ac0eeafc/Fontana-Print-Company.png",
+        "membershipLevel": 1,
+        "description": "Advertising & Media Graphic Design Marketing & Social Media Printing & Typesetting Services Signs & Banners."
+      },
+      {
+        "name": "SNAP Graphics & Design",
+        "address": "Carretera Norte 22, Timbuktu, Mali",
+        "phone": "(951) 544-3948",
+        "website": "http://www.snapgfx.com/",
+        "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_120,w_120,x_0,y_0/f_auto/q_auto:best/c_limit,h_100,w_250/f_auto/q_auto:best/v1688589109/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/87ce6e032d794dc39f6e95942f0620d2/snapgrphx.jpg",
+        "membershipLevel": 1,
+        "description": "Graphic Design."
+      },
+      {
+        "name": "J.A.R production",
+        "address": "Carretera Norte 22, Timbuktu, Mali",
+        "phone": "(760) 963-0864",
+        "website": "https://www.instagram.com/j.a.r.production?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr",
+        "image": "https://res.cloudinary.com/micronetonline/image/upload/c_crop,h_500,w_500,x_0,y_0/f_auto/q_auto:best/c_limit,h_100,w_250/f_auto/q_auto:best/v1712763336/tenants/d8bf8255-7514-4db4-b17c-1adf033d6d26/6eb3fbd1dc3c4a2ea1e89ab5bbf88684/45B1640F-6DB6-4AE2-9B93-ADAA390EB600.jpg",
+        "membershipLevel": 1,
+        "description": "Advertising/Promotions Business & Professional Services Photography / Videography Services"
+      }
+ 
+  ]
+  
