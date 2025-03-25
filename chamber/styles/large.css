@@ -1,18 +1,18 @@
-/* Reset básico */
+/* Basic reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos base */
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
 }
 
-/* Header fijo */
+/* Fixed header */
 header {
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@ header {
   z-index: 1000;
 }
 
-/* Contenedor del header */
+/* Header container */
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -33,12 +33,12 @@ header {
   align-items: center;
 }
 
-/* Título del header */
+/* Header title */
 header h1 {
   margin: 0;
 }
 
-/* Estilos de navegación */
+/* Navigation styles */
 nav ul {
   list-style: none;
   display: flex;
@@ -52,7 +52,7 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Botón hamburguesa (oculto en escritorio) */
+/* Hamburger button (hidden on desktop) */
 .menu-toggle {
   display: none;
   background: none;
@@ -62,14 +62,14 @@ nav a.active {
   cursor: pointer;
 }
 
-/* Main: agrega margen superior para que no se oculte detrás del header fijo */
+/* Main: adds top margin to avoid being hidden behind the fixed header */
 main {
   max-width: 1200px;
-  margin: 80px auto 0 auto; /* Ajusta según la altura real de tu header */
+  margin: 80px auto 0 auto; /* Adjust based on your header's actual height */
   padding: 1rem;
 }
 
-/* Controles de vista (botones para cuadrícula y lista) */
+/* View controls (buttons for grid and list view) */
 .view-controls {
   margin-bottom: 1rem;
 }
@@ -79,23 +79,23 @@ main {
   cursor: pointer;
 }
 
-/* Contenedor de cards */
+/* Cards container */
 #cards {
   display: grid;
   gap: 1rem;
 }
 
-/* Vista en cuadrícula */
+/* Grid view */
 .grid-view {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Mantén el tamaño original */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Keep the original size */
 }
 
-/* Vista en lista */
+/* List view */
 .list-view {
   grid-template-columns: 1fr;
 }
 
-/* Estilo de cada tarjeta (card) */
+/* Style for each card */
 .member-card {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -105,7 +105,7 @@ main {
   box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432); 
 }
 .member-card img {
-  max-width: 100%; /* Ajusta para que las imágenes sean responsivas */
+  max-width: 100%; /* Adjust to make images responsive */
   margin-bottom: 0.5rem;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
@@ -115,7 +115,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #333333; /* Solo una definición */
+  background-color: #333333; /* Single definition */
   color: #FFFFFF;
   padding: 20px;
   text-align: center;
@@ -175,29 +175,29 @@ footer {
   }
 }
 
-/* Estilos responsivos para móviles (hasta 600px) */
+/* Responsive styles for mobile (up to 600px) */
 @media (max-width: 600px) {
-  /* Mostrar el botón hamburguesa */
+  /* Show the hamburger button */
   .menu-toggle {
     display: block;
   }
   
-  /* Ocultar la navegación por defecto */
+  /* Hide the navigation by default */
   nav {
     display: none;
   }
   
-  /* Mostrar la navegación cuando tenga la clase nav-open */
+  /* Show navigation when it has the nav-open class */
   nav.nav-open {
     display: block;
     background-color: #444;
     position: absolute;
-    top: 100%; /* Justo debajo del header */
+    top: 100%; /* Right below the header */
     left: 0;
     width: 100%;
   }
   
-  /* Ajustar el menú en móviles */
+  /* Adjust the mobile menu */
   nav.nav-open ul {
     flex-direction: column;
     gap: 0;
@@ -210,18 +210,18 @@ footer {
     border-bottom: 1px solid #555;
   }
   
-  /* Ajuste en las tarjetas */
+  /* Adjust the cards */
   .member-card {
     box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432);
   }
   
   footer {
-    padding: 1rem; /* Ajusta el padding */
-    font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+    padding: 1rem; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font size */
   }
   
   .socials img {
-    width: 30px; /* Ajusta el tamaño de las imágenes */
+    width: 30px; /* Adjust image size */
     height: auto;
   }
 }
