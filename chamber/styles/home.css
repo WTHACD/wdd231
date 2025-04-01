@@ -1,0 +1,255 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Fixed header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+/* Header container */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header title */
+header h1 {
+  margin: 0;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Espacio para el header fijo */
+  padding: 1rem;
+}
+
+/* Hero section */
+#hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#hero .button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Home info section (Eventos, Clima, Forecast) */
+#home-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+#home-info .box {
+  flex: 1;
+  min-width: 250px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432);
+}
+
+/* View controls para cambiar de vista (Grid/List) */
+.view-controls {
+  margin-bottom: 1rem;
+}
+.view-controls button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Contenedor de tarjetas para Local Businesses */
+article.grid {
+  margin-top: 2rem;
+}
+#cards {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Grid view: muestra tarjetas en columnas */
+.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* List view: una sola columna */
+.list-view {
+  grid-template-columns: 1fr;
+}
+
+/* Estilo para cada tarjeta */
+.member-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(79, 97, 146, 0.432); 
+}
+
+.member-card img {
+  max-width: 100%; /* Adjust to make images responsive */
+  margin-bottom: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.member-card h3 {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.contact {
+  flex: 1;
+  min-width: 200px;
+}
+.contact p {
+  margin: 0;
+  line-height: 1.6;
+}
+.socials {
+  display: flex;
+  gap: 15px;
+}
+.socials a img {
+  width: 40px;
+  height: auto;
+}
+.trademark {
+  flex: 1;
+  min-width: 200px;
+}
+.trademark p {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .socials {
+    justify-content: center;
+    gap: 10px;
+  }
+  /* Para que la sección Home Info se acomode en columna en móviles */
+  #home-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Mostrar botón de menú en móviles */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Ocultar navegación por defecto */
+  nav {
+    display: none;
+  }
+  
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Navegación cuando se active (clase nav-open) */
+  nav.nav-open {
+    display: block;
+    background-color: #444;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  nav.nav-open ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  nav.nav-open a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #555;
+  }
+  
+  footer {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .socials img {
+    width: 30px;
+    height: auto;
+  }
+}

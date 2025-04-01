@@ -1,74 +1,113 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD231 - Web Frontend Development - Course Home Page">  
-    <meta name="author" content="WACD">
-    <title>Home Page</title> 
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css"> 
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Local business directory of the Timbuktu Chamber of Commerce">
+  <meta name="author" content="Wilberth Alejandro Camacho Doblado">
+  
+  <link rel="icon" href="images/favicon.ico">
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/home_directory.js"  defer></script>  
+  <script src="scripts/navigation.js"  defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/forecast.js" defer></script> 
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/home.css">
+  
+  <meta property="og:title" content="Timbuktu Chamber of Commerce - Directory">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/chamber-fb-image.png">
+  <meta property="og:url" content="https://www.example.com/directory.html">
+  
+  <title>Directory | Timbuktu Chamber of Commerce</title>
+  
+ 
+</head>
 <body>
-
-    <header>
-        <img src="images/profile.jpeg" alt="profilepic">
-        <span>Alejandro Camacho Doblado</span>
-        <div class="menu-icon">&#9776;</div>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Chamber</a>
-        <a href="https://github.com/WTHACD">GitHub Profile</a>
-        <a href="https://www.linkedin.com/in/wilberth-alejandro-camacho-doblado-330374198/" id="linkedin">LinkedIn</a>
-    </nav>
-
-    <main>
-        <section class="container">
-            <div class="card">
-                <h2>Course Work</h2>
-                <ul>
-                    <li>...</li>
-                    <li>...</li>
-                    <li>...</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h2>Arenal, Costa Rica</h2>
-                <img src="images/volcano.webp" alt="volcano">
-                <p>Arenal Volcano</p>
-            </div>
+  <header>
+    <div class="header-content">
+      <h1>Timbuktu Chamber of Commerce</h1>
+      <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h2 class="section-title">Timbuktu Chamber of Commerce</h2>
+    <section id="hero">
+        <img src="images/forum2_hero.webp" alt="hero-img" width="2500" height="300">
+        <div class="button">
+            <button id="join-btn">Join Our Chamber Today!</button>
+        </div>
+    </section>
+    
+    <h2 class="section-title">Home</h2>
+    <section id="home-info">
+        <section id="current-events" class="box">
+          <h2>Events</h2>
+          <ul>
+              <li>Cooking Class: sign-up @ Community Center, Mon 5pm</li>
+              <li>Art Exhibition: March 25th - April 5th @ City Gallery</li>
+              <li>Tech Conference: 2nd week of May @ Convention Center</li>
+              <li>Outdoor Yoga: Every Sat/Sun @ Central Park, 8am-10am</li>
+          </ul>
+          
         </section>
-
-        <section id="certificates" class="card">
-            <h2>Web and Computer Programming Certificate</h2>
-            <nav class="course-nav">
-                <ul>
-                    <li><a href="#" id="all">All</a></li>
-                    <li><a href="#" id="cse">CSE</a></li>
-                    <li><a href="#" id="wdd">WDD</a></li>
-                </ul>
-            </nav>
-            <p>Total Credits: <span id="total-credits">0</span></p>
-            <div class="certs"></div>
-            
+        <section id="weather" class="box">
+            <h2>Current Weather</h2>
+            <p id="town"></p>
+            <img id="graphic" src="images/cloudy.png" alt="weather-icon" width="90" height="90">
+            <p id="description"></p>
+            <p id="temperature"></p>
         </section>
-    </main>
-
-    <footer>
-    <p>| &copy; <span id="currentyear"></span> | Wilberth Alejandro Camacho Doblado | San José, Costa Rica</p>
-    <p><span id="lastModified"></span></p>
-    </footer>  
-
+        <section id="forecast" class="box">
+            <h2>Weather Forecast</h2>            
+            <p class="day1"></p>            
+            <p class="day2"></p>           
+            <p class="day3"></p>
+        </section>
+    </section>
+    <article class="grid">
+      <h2>Local Businesses</h2>
+      <section id="cards" class="grid-view"></section>
+    </article>
+  </main>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="contact">
+        <p>
+          Timbuktu Chamber of Commerce <br>
+          10 Rue De La Paix <br>
+          Timbuktu, Mali 999 <br>
+          info@timbuktucc.org <br>
+          Tel: (223) 555-2300
+        </p>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+        </a>
+      </div>
+      <div class="trademark">
+        <p>WDD231 Class Project | WACD</p>
+        <p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

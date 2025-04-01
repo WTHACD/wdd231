@@ -1,85 +1,83 @@
-// directory.js
-
-// Espera a que el DOM esté cargado (opcional si usas type="module" y lo pones al final del body)
+// Waits for the DOM to be loaded (optional if you use type="module" and place it at the end of the body)
 document.addEventListener('DOMContentLoaded', () => {
-    getMemberData();
-    
-    // Seleccionamos botones y sección donde se inyectará el contenido
-    const gridBtn = document.querySelector('#gridBtn');
-    const listBtn = document.querySelector('#listBtn');
-    const cardsContainer = document.querySelector('#cards');
+  getMemberData();
   
-    // Eventos para cambiar la vista
-    gridBtn.addEventListener('click', () => {
-      cardsContainer.classList.remove('list-view');
-      cardsContainer.classList.add('grid-view');
-    });
-  
-    listBtn.addEventListener('click', () => {
-      cardsContainer.classList.remove('grid-view');
-      cardsContainer.classList.add('list-view');
-    });
+  // Select buttons and section where content will be injected
+  const gridBtn = document.querySelector('#gridBtn');
+  const listBtn = document.querySelector('#listBtn');
+  const cardsContainer = document.querySelector('#cards');
+
+  // Events to change the view
+  gridBtn.addEventListener('click', () => {
+    cardsContainer.classList.remove('list-view');
+    cardsContainer.classList.add('grid-view');
   });
-  
-  /**
-   * Función principal que obtiene los datos desde el archivo JSON.
-   */
-  async function getMemberData() {
-    try {
+
+  listBtn.addEventListener('click', () => {
+    cardsContainer.classList.remove('grid-view');
+    cardsContainer.classList.add('list-view');
+  });
+});
+
+/**
+* Main function to fetch data from the JSON file.
+*/
+async function getMemberData() {
+  try {
       const response = await fetch('data/members.json');
-      if (!response.ok) throw new Error("Error al obtener los datos.");
+      if (!response.ok) throw new Error("Error fetching data.");
       
       const data = await response.json();
-      displayMembers(data); // Llamamos a la función para mostrarlos en pantalla
-    } catch (error) {
+      displayMembers(data); // Call the function to display them on screen
+  } catch (error) {
       console.error(error);
-    }
   }
+}
+
+/**
+* Generates dynamic HTML for each member and inserts it into the #cards section.
+*/
+function displayMembers(members) {
+  const cardsContainer = document.getElementById('cards');
+  cardsContainer.innerHTML = ''; // Clear previous content if any
   
-  /**
-   * Genera el HTML dinámico para cada miembro y lo inserta en la sección #cards.
-   */
-  function displayMembers(members) {
-    const cardsContainer = document.getElementById('cards');
-    cardsContainer.innerHTML = ''; // Limpiamos contenido previo si lo hubiera
-    
-    members.forEach(member => {
-      // Crear elementos HTML
+  members.forEach(member => {
+      // Create HTML elements
       const card = document.createElement('div');
       card.classList.add('member-card');
       
-      // Imagen o ícono
+      // Image or icon
       const img = document.createElement('img');
       img.src = member.image;
-      img.alt = `Logo de ${member.name}`;
+      img.alt = `Logo of ${member.name}`;
       
-      // Nombre
+      // Name
       const name = document.createElement('h3');
       name.textContent = member.name;
       
-      // Dirección
+      // Address
       const address = document.createElement('p');
-      address.textContent = `Dirección: ${member.address}`;
+      address.textContent = `Address: ${member.address}`;
       
-      // Teléfono
+      // Phone
       const phone = document.createElement('p');
-      phone.textContent = `Tel: ${member.phone}`;
+      phone.textContent = `Phone: ${member.phone}`;
       
-      // Sitio web (con enlace)
+      // Website (with link)
       const website = document.createElement('a');
       website.href = member.website;
-      website.textContent = "Visitar sitio web";
-      website.target = "_blank"; // Para abrir en nueva pestaña
+      website.textContent = "Visit Website";
+      website.target = "_blank"; // To open in a new tab
       
-      // Miembro (membership level)
+      // Membership Level
       const level = document.createElement('p');
-      level.textContent = `Nivel de membresía: ${member.membershipLevel}`;
+      level.textContent = `Membership Level: ${mapMembershipLevel(member.membershipLevel)}`;
       
-      // Descripción (opcional)
+      // Description (optional)
       const desc = document.createElement('p');
       desc.textContent = member.description;
       
-      // Agregar elementos al card
+      // Add elements to the card
       card.appendChild(img);
       card.appendChild(name);
       card.appendChild(address);
@@ -88,8 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
       card.appendChild(level);
       if (member.description) card.appendChild(desc);
       
-      // Finalmente, agregar el card al contenedor
+      // Finally, add the card to the container
       cardsContainer.appendChild(card);
-    });
+  });
+}
+
+/**
+* Maps membership levels from numbers to text.
+*/
+function mapMembershipLevel(level) {
+  switch (level) {
+      case 1:
+          return "Member";
+      case 2:
+          return "Silver";
+      case 3:
+          return "Gold";
+      default:
+          return "Unknown";
   }
-  
+}
