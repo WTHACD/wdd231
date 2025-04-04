@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gracias por unirte</title>
+  <link rel="stylesheet" href="styles/join.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Timbuktu Chamber of Commerce</h1>
+      <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="thankyou-container">
+    <section class="thankyou-message">
+        <h1>Thank You for Joining!</h1>
+        <p>Your application has been successfully submitted. We will contact you soon to continue the membership process.</p>
+            
+        <a class="button" href="index.html">Back to Home</a>
+        
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact">
+        <p>
+          Timbuktu Chamber of Commerce <br>
+          10 Rue De La Paix <br>
+          Timbuktu, Mali 999 <br>
+          info@timbuktucc.org <br>
+          Tel: (223) 555-2300
+        </p>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com" target="_blank"><img src="images/youtube.png" alt="YouTube" loading="lazy"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="images/insta.png" alt="Instagram" loading="lazy"></a>
+        <a href="https://www.tiktok.com" target="_blank"><img src="images/tiktok.png" alt="TikTok" loading="lazy"></a>
+      </div>
+      <div class="trademark">
+        <p>WDD231 Class Project | WACD</p>
+        <p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+  </script>
+</body>
+</html>
