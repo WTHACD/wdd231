@@ -22,14 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	  mainNav.classList.toggle("nav-open");
 	});
   });
-// Al cargar la página, se asigna la fecha y hora actual al campo de timestamp.
+// timestamp.
 window.addEventListener('DOMContentLoaded', () => {
     const timestampField = document.getElementById('timestamp');
     if (timestampField) {
       timestampField.value = new Date().toISOString();
     }
   
-    // Funcionalidad para abrir y cerrar modales.
+    // Modals
     const modalLinks = document.querySelectorAll('.open-modal');
     const closeButtons = document.querySelectorAll('.close');
   
@@ -40,13 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById(modalId);
         if (modal) {
           modal.style.display = 'block';
-          // Opcional: enfocar el primer elemento dentro del modal para accesibilidad.
+          // Optional: focus the first element inside the modal for accessibility.
           const firstFocusable = modal.querySelector('h2');
           if (firstFocusable) firstFocusable.focus();
         }
       });
     });
-  
+    
     closeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const modalId = btn.getAttribute('data-modal');
@@ -56,13 +56,13 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  
-    // Cierra el modal si el usuario hace clic fuera del contenido
+    
+    // Close the modal if the user clicks outside the content
     window.addEventListener('click', (e) => {
       document.querySelectorAll('.modal').forEach(modal => {
         if (e.target === modal) {
           modal.style.display = 'none';
         }
       });
-    });
+    });    
   });  
