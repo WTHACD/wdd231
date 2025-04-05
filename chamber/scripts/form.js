@@ -1,3 +1,4 @@
+
 //DATE
 document.addEventListener('DOMContentLoaded', () => {
  
@@ -63,6 +64,15 @@ window.addEventListener('DOMContentLoaded', () => {
         if (e.target === modal) {
           modal.style.display = 'none';
         }
+///////////////////////////////////////////////////////////////////
+        const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('first_name').textContent = params.get('first_name') || '';
+    document.getElementById('last_name').textContent = params.get('last_name') || '';
+    document.getElementById('email').textContent = params.get('email') || '';
+    document.getElementById('mobile').textContent = params.get('mobile') || '';
+    document.getElementById('organization').textContent = params.get('organization') || '';
+    document.getElementById('timestamp').textContent = new Date(params.get('timestamp')).toLocaleString() || '';
       });
     });    
   });  

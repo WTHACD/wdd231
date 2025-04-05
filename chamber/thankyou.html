@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gracias por unirte</title>
   <link rel="stylesheet" href="styles/join.css"/>
+  <script src="scripts/form.js" defer ></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
 </head>
 <body>
@@ -27,9 +28,13 @@
     <section class="thankyou-message">
         <h1>Thank You for Joining!</h1>
         <p>Your application has been successfully submitted. We will contact you soon to continue the membership process.</p>
-            
-        <a class="button" href="index.html">Back to Home</a>
-        
+        <p><strong>First Name:</strong> <span id="first_name"></span></p>
+        <p><strong>Last Name:</strong> <span id="last_name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone:</strong> <span id="mobile"></span></p>
+        <p><strong>Organization:</strong> <span id="organization"></span></p>
+        <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>   
+        <a class="button" href="index.html">Back to Home</a>         
     </section>
   </main>
 
@@ -57,8 +62,15 @@
     </div>
   </footer>
   <script>
-    document.getElementById("currentyear").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
+    
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('first_name').textContent = params.get('first_name') || '';
+    document.getElementById('last_name').textContent = params.get('last_name') || '';
+    document.getElementById('email').textContent = params.get('email') || '';
+    document.getElementById('mobile').textContent = params.get('mobile') || '';
+    document.getElementById('organization').textContent = params.get('organization') || '';
+    document.getElementById('timestamp').textContent = new Date(params.get('timestamp')).toLocaleString() || '';
   </script>
 </body>
 </html>
