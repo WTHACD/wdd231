@@ -92,45 +92,44 @@
     flex-direction: column;
     gap: 1em;
   }
-  
-  /* Footer */
+    /* Footer */
   footer {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
   }
-  
   .footer-container {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
-  
-  .contact, .trademark {
+  .contact {
     flex: 1;
     min-width: 200px;
   }
-  
-  .contact p, .trademark p {
+  .contact p {
     margin: 0;
     line-height: 1.6;
   }
-  
   .socials {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 15px;
   }
-  
-  .socials img {
-    width: 30px;
+  .socials a img {
+    width: 40px;
     height: auto;
   }
-  
-  /* Formulario */
+  .trademark {
+    flex: 1;
+    min-width: 200px;
+  }
+  .trademark p {
+    margin: 5px 0;
+  }
+   /* Formulario */
   form {
     background: #fff;
     padding: 1em;
@@ -284,6 +283,7 @@
     cursor: pointer;
   }
   
+
   /* MEDIA QUERIES: Pantallas grandes */
   @media (min-width: 600px) {
     .menu-toggle {
@@ -306,13 +306,50 @@
       border: none;
       padding: 0;
     }
-  
+}
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
     .footer-container {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+    .grid-view {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .socials {
+      justify-content: center;
+      gap: 10px;
+    }
+    /* Para que la sección Home Info se acomode en columna en móviles */
+    #home-info {
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    .menu-toggle {
+      display: none; /* Esconde el botón hamburguesa */
     }
   
+    nav {
+      display: flex !important; /* Fuerza la visibilidad en desktop */
+      position: static;
+      width: auto;
+      background: none;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  
+    nav a {
+      border: none;
+      padding: 0;
+    }  
+    
     .container {
       flex-direction: row;
       justify-content: space-between;
@@ -330,4 +367,3 @@
       width: 40px;
     }
   }
-  
