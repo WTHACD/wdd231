@@ -62,8 +62,7 @@
     </div>
   </footer>
   <script>
-    
-    const params = new URLSearchParams(window.location.search);
+       const params = new URLSearchParams(window.location.search);
 
     document.getElementById('first_name').textContent = params.get('first_name') || '';
     document.getElementById('last_name').textContent = params.get('last_name') || '';

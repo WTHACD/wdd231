@@ -1,0 +1,77 @@
+/* Base styles for all screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, nav, footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .grid-container {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  .card figure {
+    margin: 0;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .sidebar {
+    background-color: #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .grid-container {
+      grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    figure img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) {
+    .grid-container {
+      grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+    figure img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  

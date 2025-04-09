@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Discover page for the Chamber of Commerce site" />
+  <title>Discover | Chamber of Commerce</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)" />
+</head>
+
+<body>
+  <header>
+    <h1>Discover Our Community</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="discover.html" class="active">Discover</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
+  </nav>
+
+  <main>
+    <section class="sidebar">
+      <!-- Visit message from localStorage will be inserted here -->
+    </section>
+
+    <section id="cards" class="grid-container">
+      <!-- Cards dynamically loaded from items.json -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/visitMessage.js"></script>
+  <script src="scripts/discover.js"></script>
+  <script>
+    // Footer Year and Last Modified
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
