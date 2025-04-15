@@ -1,0 +1,23 @@
+
+Color Schema:
+- Pastel Pink (#f7e4e9): Product backgrounds and soft details
+- White (#ffffff): Main background
+- Gold (#e8c547): Buttons and highlight elements
+- Dark Gray (#333): Headers and footers
+
+
+////////////////////////////////////////////////////////////////////
+
+
+
+Typography:
+Arial will be used for its clarity and legibility on screen. It will be the primary font for all text on the site.
+
+///////////////////////////////////////////////////////////////////
+
+Scenarios
+
+
+Sofía wants to order a custom cake for her daughter's birthday.
+
+Luis wants to check the store's hours so he can visit the store in person.

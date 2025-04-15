@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Multiplaza Escazú",
+    "address": "Prospero Fernandez Highway, San Rafael de Escazú, San José",
+    "description": "Modern shopping mall with luxury stores, restaurants, and entertainment.",
+    "image": "https://multiplaza-samantha.s3.amazonaws.com/uploads/custom_seo/image/18/Ezcazu.jpg"
+  },
+  {
+    "name": "Butterfly Kingdom",
+    "address": "San Antonio de Escazú, San José",
+    "description": "Butterfly sanctuary offering educational tours about their life cycle.",
+    "image": "https://scontent.fsjo17-1.fna.fbcdn.net/v/t39.30808-6/488573404_9483048405109939_4065710038030254696_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j0sOJB0FlLcQ7kNvwEnlWRe&_nc_oc=Adneeyh9LoFZKTJm3tHbYSLrQbDgFMzhRzvrWbD8oGUaP3ZFbZ5y39E4m_izgqq8kjg&_nc_zt=23&_nc_ht=scontent.fsjo17-1.fna&_nc_gid=GckJ7IRBXSwcSZOzkigKLQ&oh=00_AfG--DrL83w9DIIgGMh4HEemRofB5uOsTLBCjCDEwlQ5UQ&oe=68047A0C"
+  },
+  {
+    "name": "Avenida Escazú",
+    "address": "Route 27, San Rafael de Escazú, San José",
+    "description": "Urban complex with shops, restaurants, and cultural spaces.",
+    "image": "https://www.escazu.go.cr/sites/default/files/styles/detalle_noticia/public/contenido/imagenes/empleo_-_avenida_escazu_0.png?itok=PSaRkVHz"
+  },
+  {
+    "name": "KM0 Market",
+    "address": "San Rafael de Escazú, San José",
+    "description": "Local market promoting organic and handcrafted products.",
+    "image": "https://scontent.fsjo17-1.fna.fbcdn.net/v/t39.30808-6/489323758_23886072294329267_5888156514463725569_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MaKsT4RiztsQ7kNvwFV3eMl&_nc_oc=Admc_-B6uF14PlEZo4ImZTOSz94EL1ygOhPJvIEsEHcFyXMVL9DnTDMUON9GB2xdb-c&_nc_zt=23&_nc_ht=scontent.fsjo17-1.fna&_nc_gid=78Dca9JiV5LUB_V_Ms1isg&oh=00_AfHLMFwYOtYpDbM5mqTloxDDq8kxSwTgA81a2196kKbXqg&oe=68047E59"
+  },
+  {
+    "name": "Pico Blanco Hill",
+    "address": "Escazú, San José",
+    "description": "Popular hiking mountain offering panoramic views of the Central Valley.",
+    "image": "https://scontent.fsjo17-1.fna.fbcdn.net/v/t39.30808-6/475559234_1185518270246386_3109588671830425765_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JtbeEdh9IcwQ7kNvwEGZzZl&_nc_oc=AdmN7nmFa0zoaDej3-GxcDiLE_rvm8EE0GjKOs8w3Hde7JfaZ0N03Aow4yoVv08KATc&_nc_zt=23&_nc_ht=scontent.fsjo17-1.fna&_nc_gid=ML_ae1MgXUnRHGwT2uIQ4Q&oh=00_AfHsOkFYtc1FPKOseSGtQay_8OPecpgXaUEqBaqdsQ8gyw&oe=68046BBD"
+  },
+  {
+    "name": "Colonial Church of Escazú",
+    "address": "Downtown Escazú, San José",
+    "description": "Historic church with colonial architecture and great cultural value.",
+    "image": "https://images.visitarcostarica.com/distrito-escazu-costa-rica.jpg"
+  },
+  {
+    "name": "Escazú Central Park",
+    "address": "Downtown Escazú, San José",
+    "description": "Recreational space with green areas, playgrounds, and community events.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT28uRxXLe8eeKuyw8n9cjjOmXhRuPqGIS9Ng&s"
+  },
+  {
+    "name": "La Ventolera Lookout",
+    "address": "San Antonio de Escazú, San José",
+    "description": "Natural viewpoint offering impressive views of the Central Valley.",
+    "image": "https://lafiebredeviajar.com/cdn/shop/articles/la-ventolera-escazu-663908.jpg?v=1723409881&width=1600"
+  }
+]

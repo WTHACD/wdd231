@@ -1,0 +1,99 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+  
+.cards-section {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+  
+/* Responsive layout using grid-template-areas */
+@media (max-width: 640px) {
+  .cards-section {
+    grid-template-columns: 1fr;
+  }
+}
+  
+@media (min-width: 641px) and (max-width: 1024px) {
+  .cards-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
+@media (min-width: 1025px) {
+  .cards-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+  
+/* Card styles */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+  
+.card figure {
+  margin: 0;
+  overflow: hidden;
+}
+  
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+  
+/* Hover effect only on large screens */
+@media (min-width: 1025px) {
+  .card img:hover {
+    transform: scale(1.05);
+  }
+}
+  
+.card-content {
+  padding: 1rem;
+}
+  
+.card h2 {
+  margin-top: 0;
+}
+  
+.card address {
+  font-style: normal;
+  color: #555;
+  margin: 0.5rem 0;
+}
+  
+.card p {
+  margin: 0.5rem 0;
+}
+  
+.card button {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #005a9c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+/* Visit message style */
+.visit-message {
+  background-color: #e0f7fa;
+  color: #006064;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+}

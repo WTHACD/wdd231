@@ -3,49 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Discover page for the Chamber of Commerce site" />
-  <title>Discover | Chamber of Commerce</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 641px)" />
-  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1025px)" />
+  <meta name="description" content="Discover points of interest in Escazú, Costa Rica."/>
+  <meta name="author" content="Wilberth Alejandro Camacho Doblado"/>
+  <title>Discover Escazú</title>
+  <link rel="icon" href="images/favicon.ico"/>
+  <link rel="stylesheet" href="styles/normalize.css"/>
+  <link rel="stylesheet" href="styles/discover.css"/>
+  <link rel="stylesheet" href="styles/large.css"/>
+  <script src="scripts/discover.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
 </head>
-
 <body>
   <header>
-    <h1>Discover Our Community</h1>
+    <div class="header-content">
+      <h1>Timbuktu Chamber of Commerce</h1>
+      <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="discover.html" class="active">Discover</a>
-    <a href="directory.html">Directory</a>
-    <a href="join.html">Join</a>
-  </nav>
-
   <main>
-    <section class="sidebar">
-      <!-- Visit message from localStorage will be inserted here -->
-    </section>
-
-    <section id="cards" class="grid-container">
-      <!-- Cards dynamically loaded from items.json -->
+    <aside id="visit-message" class="visit-message"></aside>
+    <section class="cards-section" id="cards-container">
+      <!-- Cards will be dynamically generated here -->
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Chamber of Commerce. All rights reserved.</p>
-    <p>Last modified: <span id="lastModified"></span></p>
+    <div class="footer-container">
+      <div class="contact">
+        <p>
+          Timbuktu Chamber of Commerce <br>
+          10 Rue De La Paix <br>
+          Timbuktu, Mali 999 <br>
+          info@timbuktucc.org <br>
+          Tel: (223) 555-2300
+        </p>
+      </div>
+      <div class="socials">
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+        </a>
+      </div>
+      <div class="trademark">
+        <p>WDD231 Class Project | WACD</p>
+        <p>&copy; <span id="currentyear"></span> Timbuktu Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+      </div>
+    </div>
   </footer>
-
-  <!-- Scripts -->
-  <script src="scripts/visitMessage.js"></script>
-  <script src="scripts/discover.js"></script>
-  <script>
-    // Footer Year and Last Modified
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-  </script>
 </body>
 </html>
