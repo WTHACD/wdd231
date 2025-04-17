@@ -1,0 +1,27 @@
+[
+    {
+      "nombre": "Cheesecake de Fresa",
+      "descripcion": "Delicioso pastel de queso con cobertura de fresas naturales.",
+      "precio": 4500,
+      "imagen": "https://example.com/img/cheesecake-fresa.jpg"
+    },
+    {
+      "nombre": "Brownie Clásico",
+      "descripcion": "Brownie de chocolate suave y húmedo con nueces.",
+      "precio": 2000,
+      "imagen": "https://example.com/img/brownie.jpg"
+    },
+    {
+      "nombre": "Tres Leches",
+      "descripcion": "Bizcocho tradicional bañado en tres tipos de leche.",
+      "precio": 3800,
+      "imagen": "https://example.com/img/tres-leches.jpg"
+    },
+    {
+      "nombre": "Cupcake de Vainilla",
+      "descripcion": "Cupcake esponjoso con cobertura de crema de mantequilla.",
+      "precio": 1200,
+      "imagen": "https://example.com/img/cupcake-vainilla.jpg"
+    }
+  ]
+  
