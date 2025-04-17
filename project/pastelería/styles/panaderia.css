@@ -1,5 +1,9 @@
 /* style.css */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
     --color-primario: #8B5CF6; /* lavanda fuerte */
     --color-secundario: #F3E8FF; /* lavanda claro */
@@ -17,19 +21,35 @@ body {
 }
 
 header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
     background-color: var(--color-primario);
     color: white;
     padding: 1em 0;
+    padding: 1rem;
+    z-index: 1000;
     text-align: center;
 }
 
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header title */
+header h1 {
+  margin: 0;
+}
+
 nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 0;
-    margin: 1em 0 0 0;
-    list-style: none;
+   list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
@@ -42,10 +62,21 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main content */
 main {
-    padding: 2em;
-    max-width: 1000px;
-    margin: auto;
+  max-width: 1200px;
+  margin: 80px auto 0 auto; /* Espacio para el header fijo */
+  padding: 1rem;
 }
 
 section {
@@ -66,11 +97,17 @@ section {
     text-align: center;
     background-color: var(--color-secundario);
     padding: 1em;
+    position: relative;
     transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .producto:hover {
-    transform: scale(1.03);
+  transform: translateY(-5px);
+}
+
+.fade-in {
+  animation: aparecer 0.6s ease-in-out both;
 }
 
 .producto img {
@@ -90,4 +127,53 @@ footer {
 footer a {
     color: var(--color-acento);
     text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  
+  .grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+ 
+  /* Para que la sección Home Info se acomode en columna en móviles */
+  #home-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Mostrar botón de menú en móviles */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Ocultar navegación por defecto */
+  nav {
+    display: none;
+  }
+  
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Navegación cuando se active (clase nav-open) */
+  nav.nav-open {
+    display: block;
+    background-color: var(--color-acento);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  nav.nav-open ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  nav.nav-open a {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px var(--color-secundario);
+  }
 }

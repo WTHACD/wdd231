@@ -1,0 +1,20 @@
+[
+  {
+    "nombre": "Pastel de Chocolate",
+    "descripcion": "Delicioso pastel con cobertura de chocolate.",
+    "precio": 9500,
+    "imagen": "imagenes/pastel1.jpg"
+  },
+  {
+    "nombre": "Cheesecake de Fresa",
+    "descripcion": "Tarta de queso con fresas frescas.",
+    "precio": 8700,
+    "imagen": "imagenes/pastel2.jpg"
+  },
+  {
+    "nombre": "Queque Seco",
+    "descripcion": "Perfecto para acompañar con café.",
+    "precio": 4200,
+    "imagen": "imagenes/pastel3.jpg"
+  }
+]

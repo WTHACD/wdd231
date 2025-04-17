@@ -1,0 +1,43 @@
+
+
+
+
+  
+
+
+
+  
+  .fav-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .fav-btn:hover {
+    transform: scale(1.2);
+  }
+  
+  .fav-btn.activo {
+    color: red;
+  }
+
+
+ 
+  
+  #catalogo img {
+    width: 360px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px; /* opcional */
+  }
+ 
+
+
+

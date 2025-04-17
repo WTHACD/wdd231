@@ -1,27 +1,93 @@
 [
     {
-      "nombre": "Cheesecake de Fresa",
-      "descripcion": "Delicioso pastel de queso con cobertura de fresas naturales.",
+      "nombre": "Strawberry Cheesecake",
+      "descripcion": "Delicious cheesecake topped with fresh strawberries.",
       "precio": 4500,
-      "imagen": "https://example.com/img/cheesecake-fresa.jpg"
+      "imagen": "images/cheesecake.webp"
     },
     {
-      "nombre": "Brownie Clásico",
-      "descripcion": "Brownie de chocolate suave y húmedo con nueces.",
+      "nombre": "Classic Brownie",
+      "descripcion": "Soft and fudgy chocolate brownie with nuts.",
       "precio": 2000,
-      "imagen": "https://example.com/img/brownie.jpg"
+      "imagen": "images/brownies.webp"
     },
     {
-      "nombre": "Tres Leches",
-      "descripcion": "Bizcocho tradicional bañado en tres tipos de leche.",
+      "nombre": "Tres Leches Cake",
+      "descripcion": "Traditional sponge cake soaked in three kinds of milk.",
       "precio": 3800,
-      "imagen": "https://example.com/img/tres-leches.jpg"
+      "imagen": "images/tres-leches.jpeg"
     },
     {
-      "nombre": "Cupcake de Vainilla",
-      "descripcion": "Cupcake esponjoso con cobertura de crema de mantequilla.",
+      "nombre": "Vanilla Cupcake",
+      "descripcion": "Fluffy cupcake with buttercream frosting.",
       "precio": 1200,
-      "imagen": "https://example.com/img/cupcake-vainilla.jpg"
+      "imagen": "images/vainilla.jpg"
+    },
+    {
+      "nombre": "Chocolate Cake",
+      "descripcion": "Moist cake with a double layer of ganache.",
+      "precio": 7500,
+      "imagen": "images/chocolate-cake.webp"
+    },
+    {
+      "nombre": "Strawberry Tart",
+      "descripcion": "Shortcrust base with pastry cream and fresh strawberries.",
+      "precio": 6900,
+      "imagen": "images/strawberry-tart.webp"
+    },
+    {
+      "nombre": "Classic Cheesecake",
+      "descripcion": "With a cookie base and topped with red berries.",
+      "precio": 7200,
+      "imagen": "images/Classic.jpeg"
+    },
+    {
+      "nombre": "Chilean Layer Cake",
+      "descripcion": "Thin dough layers filled with dulce de leche.",
+      "precio": 8000,
+      "imagen": "images/torta.webp"
+    },
+    {
+      "nombre": "Cream-Filled Biscuits",
+      "descripcion": "Delicate sponge cakes filled with pastry cream and dusted with powdered sugar.",
+      "precio": 1500,
+      "imagen": "images/cream.jpg"
+    },
+    {
+      "nombre": "Apple Kuchen",
+      "descripcion": "Soft dough filled with caramelized apples.",
+      "precio": 6500,
+      "imagen": "images/superumbo.jpg"
+    },
+    {
+      "nombre": "Lemon Pie",
+      "descripcion": "Classic tart with lemon filling and meringue.",
+      "precio": 5800,
+      "imagen": "images/lemon.jpg"
+    },
+    {
+      "nombre": "Berliner Doughnuts",
+      "descripcion": "Fried dough filled with pastry cream or jam.",
+      "precio": 1200,
+      "imagen": "images/berliner.jpg"
+    },
+    {
+      "nombre": "Oatmeal Cookies",
+      "descripcion": "Crispy cookies baked with oats and honey.",
+      "precio": 800,
+      "imagen": "images/avena.jpg"
+    },
+    {
+      "nombre": "Alfajores",
+      "descripcion": "Two cookies joined by dulce de leche and dusted with powdered sugar.",
+      "precio": 1000,
+      "imagen": "images/alfajor.png"
+    },
+    {
+      "nombre": "Cinnamon Rolls",
+      "descripcion": "Sweet dough rolled with cinnamon and glazed.",
+      "precio": 2200,
+      "imagen": "images/cinnamon.webp"
     }
   ]
   

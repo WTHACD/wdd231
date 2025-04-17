@@ -1,31 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Dulce Sueño</title>
+    <title>Sweet Dream Bakery</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/panaderia.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <script src="scripts/panaderia.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Pastelería Dulce Sueño</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Sweet Dream Bakery</h1>
+    <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Products</a></li>
+        <li><a href="contacto.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
     <main>
-        <h2>Catálogo de Productos</h2>
+        <h2>Our Products</h2>
         <div class="galeria" id="catalogo">
-            <!-- Productos cargados dinámicamente -->
+          <!-- Productos cargados dinámicamente -->
         </div>
+        
     </main>
     <footer>
-        <p>&copy; 2025 Pastelería Dulce Sueño</p>
-    </footer>
-    <script src="scripts/panaderia.js"></script>
+      <p>Follow us on our social media</p>
+      <div class="socials">
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+          <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+        </a>
+        <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+          <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+        </a>
+      </div>
+      <p>&copy; 2025 Sweet Dream Bakery</p>
+    </footer>  
+    
 </body>
 </html>

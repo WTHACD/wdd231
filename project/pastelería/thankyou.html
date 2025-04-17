@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You for Contacting Us!</title>
+  <link rel="stylesheet" href="styles/panaderia.css" />
+  <link rel="stylesheet" href="styles/navigation.css" />
+  <script src="scripts/navigation.js"  defer></script>
+  <style>
+    .mensaje-confirmacion {
+      background-color: var(--color-secundario);
+      border-left: 6px solid var(--color-primario);
+      padding: 2em;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 2em auto;
+      text-align: center;
+    }
+
+    .mensaje-confirmacion h2 {
+      color: var(--color-primario);
+    }
+
+    .mensaje-confirmacion p span {
+      font-weight: bold;
+      color: var(--color-texto);
+    }
+
+    .boton-regresar {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.7em 1.5em;
+      background-color: var(--color-primario);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-regresar:hover {
+      background-color: #6d28d9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sweet Dream Bakery</h1>
+    <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Products</a></li>
+        <li><a href="contacto.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mensaje-confirmacion" id="mensajeGracias">
+      <h2>Thank you for your message!</h2>
+      <p><span>Name:</span> <span id="mostrarNombre"></span></p>
+      <p><span>Email:</span> <span id="mostrarEmail"></span></p>
+      <p><span>Message:</span></p>
+      <p id="mostrarMensaje"></p>
+      <a href="index.html" class="boton-regresar">Return to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="socials">
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+        <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function obtenerParametro(nombre) {
+      const url = new URL(window.location.href);
+      return decodeURIComponent(url.searchParams.get(nombre) || '');
+    }
+    document.getElementById('mostrarNombre').textContent = obtenerParametro('nombre');
+    document.getElementById('mostrarEmail').textContent = obtenerParametro('email');
+    document.getElementById('mostrarMensaje').textContent = obtenerParametro('mensaje');
+  </script>
+</body>
+</html>

@@ -3,25 +3,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
   if (contenedor) {
-    fetch("data/productos.json")
+    fetch("datos/productos.json")
       .then(res => res.json())
       .then(productos => {
         contenedor.innerHTML = productos.map((p, i) => {
           const esFavorito = favoritos.includes(i);
           return `
             <div class="producto fade-in">
-              <img src="${p.imagen}" alt="${p.nombre}" />
-              <h3>${p.nombre}</h3>
-              <p>${p.descripcion}</p>
-              <p><strong>₡${p.precio.toLocaleString()}</strong></p>
-              <button class="fav-btn ${esFavorito ? 'activo' : ''}" data-id="${i}">
-                ${esFavorito ? "❤️" : "🤍"}
+              <img src="\${p.imagen}" alt="\${p.nombre}" />
+              <h3>\${p.nombre}</h3>
+              <p>\${p.descripcion}</p>
+              <p><strong>₡\${p.precio.toLocaleString()}</strong></p>
+              <button class="fav-btn \${esFavorito ? 'activo' : ''}" data-id="\${i}">
+                \${esFavorito ? "❤️" : "🤍"}
               </button>
             </div>
           `;
         }).join("");
 
-        // Activar listeners para botones de favoritos
         document.querySelectorAll(".fav-btn").forEach(btn => {
           btn.addEventListener("click", e => {
             const id = parseInt(btn.dataset.id);

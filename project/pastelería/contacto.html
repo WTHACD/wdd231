@@ -1,44 +1,119 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Dulce Sueño</title>
-    <link rel="stylesheet" href="styles/panaderia.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Sweet Dream Bakery</title>
+  <link rel="stylesheet" href="styles/panaderia.css" />
+  <link rel="stylesheet" href="styles/navigation.css" />
+  <script src="scripts/navigation.js"  defer></script>
+  <meta property="og:type" content="website">
+  <style>
+    form {
+      background-color: var(--color-secundario);
+      border-radius: 12px;
+      padding: 2em;
+      max-width: 600px;
+      margin: 2em auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1em;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-top: 0.5em;
+      font-size: 1em;
+    }
+    form button {
+      margin-top: 1.5em;
+      background-color: var(--color-acento);
+      color: white;
+      border: none;
+      padding: 0.8em 1.5em;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #d97706;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Pastelería Dulce Sueño</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Contacto</h2>
-        <form action="#" method="post">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br>
+  <header>
+    <h1>Sweet Dream Bakery</h1>
+    <button class="menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="mainNav">    
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productos.html">Products</a></li>
+        <li><a href="contacto.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Contact</h2>
+    <form action="thankyou.html" method="GET">
+      <label for="nombre">Name:</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-            <label for="email">Correo electrónico:</label><br>
-            <input type="email" id="email" name="email" required><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-            <label for="mensaje">Mensaje:</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br>
+      <label for="mensaje">Message:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
+      <button type="submit">Send</button>
+    </form>
+  </main>
+  <footer>
+    <p>Follow us on our social media</p>
+    <div class="socials">
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.png" alt="YouTube" loading="lazy" width="40" height="40">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+        <img src="images/insta.png" alt="Instagram" loading="lazy" width="40" height="40">
+      </a>
+      <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok">
+        <img src="images/tiktok.png" alt="TikTok" loading="lazy" width="40" height="40">
+      </a>
+    </div>
+    <p>&copy; 2025 Sweet Dream Bakery</p>
+  </footer>
 
-        <h3>Ubicación y Horarios</h3>
-        <p>San José, Costa Rica</p>
-        <p>Lunes a Sábado: 9:00 AM - 6:00 PM</p>
-        <p>Teléfono: +506 2222-2222</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 Pastelería Dulce Sueño</p>
-    </footer>
+  <script>
+    // Show form data on thankyou.html
+    if (window.location.pathname.includes("thankyou.html")) {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("nombre");
+      const email = params.get("email");
+      const message = params.get("mensaje");
+
+      const output = document.createElement("div");
+      output.style.maxWidth = "600px";
+      output.style.margin = "2em auto";
+      output.style.padding = "2em";
+      output.style.backgroundColor = "#fff7ed";
+      output.style.borderRadius = "12px";
+
+      output.innerHTML = `
+        <h2>Thank you for contacting us, ${name}!</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message sent:</strong></p>
+        <blockquote>${message}</blockquote>
+      `;
+
+      document.body.appendChild(output);
+    }
+  </script>
 </body>
 </html>
